@@ -1,0 +1,30 @@
+
+h1{
+    color: #000000;
+}
+.sem-button{
+    border: none;
+    border-radius: 10px;
+    width: 280px;
+    height: 60px;
+    color: #6f6f72;
+    background-color: white;
+    font-size: 20px;
+    
+}
+
+.form-container{
+    margin-top: 200px !important;
+}
+@media screen and (max-width: 780px) {
+    h1{
+        font-size: 25px;
+    }
+    .sem-button{
+        height: 50px;
+        width: 220px;
+    }
+    .form-container{
+        margin-top: 100px !important;
+    }
+}

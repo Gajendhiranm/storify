@@ -1,0 +1,18 @@
+
+h1 .stdName{
+    color: #6214f3;
+}
+
+.main-buttons{
+   height:500px;
+}
+.main-buttons button{
+    border: none;
+    border-radius: 10px;
+    width: 280px;
+    height: 60px;
+    color: black;
+    background-color: white !important;
+    font-size: 20px;
+    
+}
