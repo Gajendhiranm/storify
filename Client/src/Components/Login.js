@@ -13,7 +13,7 @@ const Login = (props) => {
     } else if (password.length < 5 || password.length > 15) {
       alert("Invalid password");
     } else {
-      const URL = "http://localhost:5000/login";
+      const URL = "http://localhost:5002/login";
       const response = await fetch(URL, {
         method: "POST",
         body: JSON.stringify({
@@ -31,7 +31,10 @@ const Login = (props) => {
        // localStorage.setItem("regno", currentStudent.regno)
         history.push("/home")
       }
-      else if(response.status === 404)  alert("not found");
+      else if(response.status === 404){
+        alert("not found");
+        console.log(e);
+      }  
       else if(response.status === 401) alert("incorrect password");
       else alert("error");
     }

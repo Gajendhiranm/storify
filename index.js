@@ -6,13 +6,14 @@ const cors = require("cors")
 app.use(cors())
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5002
 
 const {MONGOURI} = require("./config/index")
 mongoose.connect(MONGOURI, {
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useFindAndModify:true
 }, () => console.log("Connected to DB"))
 
 const router = require("./routes/route")

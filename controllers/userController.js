@@ -1,4 +1,5 @@
 const Student = require("../model/Student");
+
 const signup = (req, res) => {
   let {name, email, regno, password} = req.body
   Student.findOne({regno}).then(stud => {
@@ -13,6 +14,8 @@ const signup = (req, res) => {
   })
   .catch((e) => res.status(502).send({ message: "Server error" })); 
 }
+
+
 const login = async (req,res) => {
     let {regno, password} = req.body;
     try{
@@ -27,4 +30,13 @@ const login = async (req,res) => {
     }
 }
 
-module.exports = {signup , login};
+const details =  (req,res) => {
+  console.log(req.url)
+  let {details,findId} = req.body;
+   Student.findByIdAndUpdate(findId,{details:details},{new:true},(err,data)=>{
+    if(err) res.status(404).send({message:"user not found"});
+    else res.status(200).send({data});
+   })
+}
+
+module.exports = {signup , login,details};

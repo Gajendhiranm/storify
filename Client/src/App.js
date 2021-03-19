@@ -6,6 +6,7 @@ import {BrowserRouter,Redirect,Route, Switch } from "react-router-dom";
 import Cgpa from './Components/Cgpa';
 import Details from './Components/Details';
 import { useState } from 'react';
+import StudentDetails from './Components/StudentDetails';
 
 function App() {  
   const [currentUser,setCurrentUser] = useState({}); 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/details"><Details/></Route> 
        <Route path="/login"><Login setCurrentUser={setCurrentUser}/></Route>
        <Route path="/signup"> <Signin/></Route>
+       <Route path="/studentdetails"><StudentDetails/></Route>
       </Switch>     
       </BrowserRouter>
     </div>

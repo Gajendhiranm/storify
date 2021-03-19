@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const studentSchema = new mongoose.Schema({
   regno: { type: String, required: true },
   name: { type: String, required: true },
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique: true},
   password: { type: String, required: true },
-  details:{type:Object,default:null},
+  details:{type:Object ,default:null},
 });
 
 // const detailSchema = new mongoose.Schema({
