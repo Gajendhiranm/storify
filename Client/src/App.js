@@ -12,7 +12,6 @@ import ViewDetails from './Components/viewDetails';
 function App() {  
   const [currentUser,setCurrentUser] = useState(null);
 
-  console.log('curent user .;..;.' , currentUser) 
   useEffect(() => {
     console.log(`connected......`)
     if(localStorage.getItem('currentUser')){
@@ -20,6 +19,9 @@ function App() {
       setCurrentUser(JSON.parse(localStorage.getItem('currentUser')));
     }
   },[])
+  
+  console.log('curent user .;..;.' , currentUser,localStorage.getItem('currentUser')) 
+  
 
   const setUser = (user)=>{
     console.log('setuser......',user)
@@ -41,7 +43,7 @@ function App() {
       <Route path="/login"><Login setUser={setUser} currentUser = {currentUser} /></Route>
       <Route path="/signup" > <Signin currentUser = {currentUser}/></Route>
 
- 
+      {currentUser==null ? <Redirect to="/login" /> : <Redirect to="/home" />}
 
       
       </Switch>     

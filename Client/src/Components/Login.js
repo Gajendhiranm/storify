@@ -55,13 +55,13 @@ const Login = (props) => {
                 <input
                   type="text"
                   placeholder="Register Number"
-                  className="mb-2"
+                  className="mb-2 pl-4"
                   onChange={(e) => setRegno(e.target.value)}
                 /><br/>
                 <input
                   type="password"
                   placeholder="Password"
-                  className="mb-2"
+                  className="mb-2 pl-4"
                   onChange={(e) => setPassword(e.target.value)}
                 /><br/>
                 <button className="mt-2 justify-content-center login-button" type="submit" >
