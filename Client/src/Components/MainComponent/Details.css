@@ -1,0 +1,42 @@
+.personalDetailsForm input{
+    border: none;
+    border-radius: 10px;
+    width: 280px;
+    height: 60px;
+    color: #000000;
+    font-size: 20px;
+    outline: none;
+}
+.personalDetailsForm input::-webkit-outer-spin-button, .personalDetailsForm input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+.personalDetailsForm select{
+    border: none;
+    border-radius: 10px;
+    width: 280px;
+    height: 60px;
+    color: #000000;
+    font-size: 20px;
+    outline: none;
+}
+.personalDetailsForm .address{
+    border: none;
+    border-radius: 10px;
+    height: 157px;
+    font-size: 20px; 
+    outline: none;
+}
+.personalDetailsForm .submitBotton{
+    margin: auto;
+
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    width: 170px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+}

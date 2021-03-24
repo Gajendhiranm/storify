@@ -5,22 +5,45 @@ import Home from "./Components/Home";
 import {BrowserRouter,Redirect,Route, Switch } from "react-router-dom";
 import Cgpa from './Components/Cgpa';
 import Details from './Components/Details';
-import { useState } from 'react';
-import StudentDetails from './Components/StudentDetails';
+import { useEffect, useState } from 'react';
+import ViewDetails from './Components/viewDetails';
+
 
 function App() {  
-  const [currentUser,setCurrentUser] = useState({}); 
+  const [currentUser,setCurrentUser] = useState(null);
+
+  console.log('curent user .;..;.' , currentUser) 
+  useEffect(() => {
+    console.log(`connected......`)
+    if(localStorage.getItem('currentUser')){
+      console.log(localStorage.getItem('currentUser'))
+      setCurrentUser(JSON.parse(localStorage.getItem('currentUser')));
+    }
+  },[])
+
+  const setUser = (user)=>{
+    console.log('setuser......',user)
+      localStorage.setItem('currentUser',JSON.stringify(user));
+      setCurrentUser(user)
+    }
+  
   return (
     <div className="App">
       <BrowserRouter>
       <Switch>
-      <Redirect exact from="/" to="/login"/>
-      <Route path="/home"><Home currentUser={currentUser}/></Route>
-      <Route path="/cgpa"><Cgpa/></Route>
-      <Route path="/details"><Details/></Route> 
-       <Route path="/login"><Login setCurrentUser={setCurrentUser}/></Route>
-       <Route path="/signup"> <Signin/></Route>
-       <Route path="/studentdetails"><StudentDetails/></Route>
+
+
+
+      <Route path="/home"><Home currentUser = {currentUser} setCurrentUser = {setCurrentUser}/></Route>
+      <Route path="/cgpa"  ><Cgpa currentUser = {currentUser}/></Route>
+      <Route path="/addDetails"  ><Details currentUser = {currentUser}/></Route>
+      <Route path="/viewdetails" ><ViewDetails currentUser = {currentUser}/></Route>
+      <Route path="/login"><Login setUser={setUser} currentUser = {currentUser} /></Route>
+      <Route path="/signup" > <Signin currentUser = {currentUser}/></Route>
+
+ 
+
+      
       </Switch>     
       </BrowserRouter>
     </div>

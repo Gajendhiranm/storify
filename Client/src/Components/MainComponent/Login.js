@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Register from "../Images/Register.png";
 import "../Components/Login.css";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 const Login = (props) => {
   const history = useHistory();
   const [regno, setRegno] = useState("");
@@ -27,7 +27,7 @@ const Login = (props) => {
       if(response.status === 200){
         let currentStudent = await response.json();
 
-        props.setUser(currentStudent)
+        props.setCurrentUser(currentStudent)
        // localStorage.setItem("regno", currentStudent.regno)
         history.push("/home")
       }
@@ -40,8 +40,7 @@ const Login = (props) => {
     }
   };
   return (
-    <>
-    { localStorage.getItem('currentUser')==null ?  <div>
+    <div>
       <div className="container-fluid Signup position-relative">
         <div className="row">
           <div className="col-md-6 image-div text-center">
@@ -76,10 +75,7 @@ const Login = (props) => {
         </div>
       </div>
     </div>
- : <Redirect to="/home" />  }
-    </>
-   
-   );
+  );
 };
 
 export default Login;
