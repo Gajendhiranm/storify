@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Components/Details.css";
-import { Link, Redirect, useHistory, withRouter } from "react-router-dom";
+import { Redirect, useHistory} from "react-router-dom";
 export default function Details(props) {
   const history = useHistory();
   const [studentData, setStudentData] = useState({
@@ -28,14 +28,10 @@ export default function Details(props) {
     overallCGPA: "",
     description: "",
   });
-  // submitData = (e) => {
-  //     e.preventDefault()
-  //     console.log(studentData)
-  // }
+  
   let regnoId = localStorage.getItem("Id");
   const details = async (e) =>{
     e.preventDefault();
-     console.log("omg : "+regnoId);
     const URL = "http://localhost:5002/details";
       const response = await fetch(URL, {
         method: "POST",
@@ -63,7 +59,6 @@ export default function Details(props) {
                 <input
                   className="m-3 p-3"
                   type="date"
-                  // value={studentData.DOB}
                   placeholder="Date-of-birth"
                   onChange={(e) => {
                       setStudentData(prevState => ({

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Register from "../Images/Register.png";
+import Register from "../Images/t.svg";
 import "../Components/Signin.css";
 import { Link, Redirect, useHistory, withRouter } from "react-router-dom";
 const Signin = (props) => {

@@ -39,4 +39,15 @@ const details =  (req,res) => {
    })
 }
 
-module.exports = {signup , login,details};
+const viewdetails = (req,res) => {
+  let{findId} = req.body;
+  Student.findById(findId, (error, data) => {
+    if (error) {
+      return next(error)
+    } else {
+      res.json(data)
+    }
+})
+
+}
+module.exports = {signup , login, details, viewdetails};

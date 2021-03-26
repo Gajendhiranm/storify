@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect, useHistory } from "react-router";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import "../Components/Home.css";
 
@@ -10,6 +10,7 @@ const Home = (props) => {
     
     const handleLogOut = () => {
         localStorage.clear();
+        localStorage.removeItem('Id');
         props.setCurrentUser(null)
         // history.push('/login')
     }
