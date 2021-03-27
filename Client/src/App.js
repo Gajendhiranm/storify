@@ -1,8 +1,8 @@
-import './App.css';
+
 import Login from './Components/Login';
 import Signin from './Components/Signin';
 import Home from "./Components/Home";
-import {BrowserRouter,Redirect,Route, Switch } from "react-router-dom";
+import {BrowserRouter,Redirect,Route, Switch, useHistory } from "react-router-dom";
 import Cgpa from './Components/Cgpa';
 import Details from './Components/Details';
 import { useEffect, useState } from 'react';
@@ -11,7 +11,7 @@ import ViewDetails from './Components/viewDetails';
 
 function App() {  
   const [currentUser,setCurrentUser] = useState(null);
-
+  const history = useHistory()
   useEffect(() => {
     console.log(`connected......`)
     if(localStorage.getItem('currentUser')){

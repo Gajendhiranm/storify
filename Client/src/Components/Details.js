@@ -43,9 +43,9 @@ export default function Details(props) {
           "Content-type": "application/json",
         },
       });
-      if (response.status === 201) {
-        history.push("/details");
-      }
+      // if (response.status === 200) {
+      //   history.push("/details");
+      // }
   }
   return (
     <>
@@ -76,10 +76,10 @@ export default function Details(props) {
                     studentData.gender = e.target.value;
                   }}
                 >
-                  <option selected value="gender">Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
+                  <option selected value="Gender">Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
                 </select>
                 <input className="m-3 p-3" type="text" placeholder="Father's-Name"  onChange={(e) => {
                     studentData.fatherName = e.target.value;
@@ -220,6 +220,7 @@ export default function Details(props) {
             <button
               type="submit"
               className="submitBotton mt-4"
+              
             >
               {" "}
               Submit{" "}

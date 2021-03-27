@@ -87,8 +87,10 @@ export default function ViewDetails(props) {
                     <td>Maria Anders</td>
                 </tr>
             </table> */}
-        <h1>Name: {viewdetail.DOB}</h1>
-        <h2>Date of Birth: {props.currentUser && props.currentUser.details.DOB}</h2>
+        <h1>Name: {props.currentUser && props.currentUser.name}</h1>
+        <h2>Date of Birth: {viewdetail.DOB }</h2>
+        <h2>Gender: {viewdetail.gender}</h2>
+
     </div>
         }
         </>
