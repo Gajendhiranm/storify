@@ -36,7 +36,9 @@ const Signin = (props) => {
       });
       if (response.status === 201) {
         history.push("/login");
-      } 
+      } else if(response.status == 403){
+        alert("Student already exists");
+      }
     }
   };  
   return (

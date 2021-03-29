@@ -9,11 +9,11 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT || 5002
 
 const {MONGOURI} = require("./config/index")
+mongoose.set('useFindAndModify', false);
 mongoose.connect(MONGOURI, {
     useUnifiedTopology: true,
     useCreateIndex: true,
     useNewUrlParser: true,
-    useFindAndModify:true
 }, () => console.log("Connected to DB"))
 
 const router = require("./routes/route")
