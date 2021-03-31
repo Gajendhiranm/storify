@@ -66,6 +66,7 @@ export default function Details(props) {
                       }))                
                   //  studentData.DOB = e.target.value;
                   }}
+                  required
                 />
                 <select
                   className="m-3 p-2"

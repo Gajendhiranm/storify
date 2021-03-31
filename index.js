@@ -19,4 +19,4 @@ mongoose.connect(MONGOURI, {
 const router = require("./routes/route")
 app.use(router)
 
-app.listen(PORT, () => console.log("Connected to port" + PORT))
+app.listen(PORT, () => console.log("Connected to Port : " + PORT))

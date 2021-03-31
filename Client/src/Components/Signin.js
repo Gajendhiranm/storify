@@ -22,7 +22,7 @@ const Signin = (props) => {
       alert("Invalid password");
     } else {
       const URL = "http://localhost:5002/signup";
-      const response = await fetch(URL, {
+      const res = await fetch(URL, {
         method: "POST",
         body: JSON.stringify({
           regno: regno.trim(),
@@ -34,9 +34,9 @@ const Signin = (props) => {
           "Content-type": "application/json",
         },
       });
-      if (response.status === 201) {
+      if (res.status === 201) {
         history.push("/login");
-      } else if(response.status == 403){
+      } else if(res.status == 403){
         alert("Student already exists");
       }
     }

@@ -7,6 +7,7 @@ export default function ViewDetails(props) {
     const [viewdetail, setViewDetails] = useState('');
     
     let regnoId = localStorage.getItem('Id');
+    // let regnoId = props.currentUser && props.currentUser._id;
    
 
     useEffect(()=>{
