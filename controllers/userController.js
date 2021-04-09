@@ -6,7 +6,6 @@ const Cryptr = require("cryptr");
 cryptr = new Cryptr('devnami');
 
 const signup = async(req, res) => {
-  console.log(req.url)
   // let {name, email, regno, password} = req.body
   // Student.findOne({regno}).then(stud => {
   //     if(!stud) {
@@ -33,7 +32,6 @@ const signup = async(req, res) => {
 
 
 const login = async (req,res) => {
-  console.log(req.url)
     // let {regno, password} = req.body;
     // try{
     //   let students = await Student.find({});
@@ -62,10 +60,7 @@ const login = async (req,res) => {
 }
 
 const details =  (req,res) => {
-  console.log(req.url)
   let {details,findId} = req.body;
-
-  // console.log(details)
     // for (const key in details)  details[key] = cryptr.encrypt(details[key]);
     Student.findByIdAndUpdate(findId,{details:details},{new:true},(err,data)=>{
       if(err) res.status(404).send({message:"user not found"});
@@ -77,7 +72,6 @@ const details =  (req,res) => {
 
 
 const viewdetails = (req,res) => {
-  console.log(req.url)
   let{findId} = req.body;
   Student.findById(findId, (error, data) => {
     if (error) {

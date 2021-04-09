@@ -13,7 +13,7 @@ const Cgpa = (props) => {
       <form className="container form-container"> 
           <div className="d-flex flex-wrap p-sm-1 mt-5">
               <div className="col-md-6 d-flex flex-column align-items-center justify-content-center">
-                  <button className="m-3 sem-button font-weight-bolder" onClick={()=>history.push("/semester1")}>Semester 1</button>
+                  <button className="m-3 sem-button font-weight-bolder" onClick={()=>history.push("/semesterone")}  >Semester 1</button>
                   <button className="m-3 sem-button font-weight-bolder">Semester 2</button>
                   <button className="m-3 sem-button font-weight-bolder">Semester 3</button>
                   <button className="m-3 sem-button font-weight-bolder">Semester 4</button>

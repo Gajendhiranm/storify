@@ -34,7 +34,6 @@ const Login = (props) => {
       }
       else if(res.status === 401){
         alert("User not found");
-        console.log(e);
       }  
       else if(res.status === 400) alert("Incorrected password");
       else alert("error");

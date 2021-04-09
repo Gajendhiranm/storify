@@ -33,7 +33,6 @@ const Login = (props) => {
       }
       else if(response.status === 404){
         alert("not found");
-        console.log(e);
       }  
       else if(response.status === 401) alert("incorrect password");
       else alert("error");

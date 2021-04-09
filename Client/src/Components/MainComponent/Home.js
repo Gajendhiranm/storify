@@ -5,7 +5,6 @@ import "../Components/Home.css";
 import ViewDetails from "./viewDetails";
 const Home = (props) => {
     const history = new useHistory();
-    console.log(props.currentUser);
     localStorage.setItem("Id",props.currentUser._id);
     return(     
      <div className="container-fluid">
