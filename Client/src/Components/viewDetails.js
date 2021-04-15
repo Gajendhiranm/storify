@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import { Redirect, useHistory} from "react-router";
-
+import error from "../Images/404.svg";
 
 export default function ViewDetails(props) {
     
@@ -36,66 +36,13 @@ export default function ViewDetails(props) {
         <>
         { localStorage.getItem('currentUser')==null ? <Redirect to="/login" /> : 
         <div>
-            {/* <table id="customers">
-                <tr>
-                    <tr>DOB</tr>
-                    <tr>Gender</tr>
-                    <tr>Father's Name</tr>
-                    <tr>Mother's Name</tr>
-                    <tr>Address</tr>
-                    <tr>Phone number</tr>
-                    <tr>E-mail</tr>
-                    <tr>Aadhar card Number</tr>
-                    <tr>SSLC mark</tr>
-                    <tr>SSLC Percentage</tr>
-                    <tr>HSC Mark</tr>
-                    <tr>HSC Percentage</tr>
-                    <tr>HSC cutoff</tr>
-                    <tr>Semester - 1 CGPA </tr>
-                    <tr>Semester - 2 CGPA </tr>
-                    <tr>Semester - 3 CGPA </tr>
-                    <tr>Semester - 4 CGPA </tr>
-                    <tr>Semester - 5 CGPA </tr>
-                    <tr>Semester - 6 CGPA </tr>
-                    <tr>Semester - 7 CGPA </tr>
-                    <tr>Semester - 8 CGPA </tr>
-                    <tr>overall CGPA</tr>
-                    <tr>Description </tr>
-                    
-                </tr>
-                <tr>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                    <td>Germany</td>
-                    <td>Alfreds Futterkiste</td>
-                    <td>Maria Anders</td>
-                </tr>
-            </table> */}
             {viewdetail == null ? <>
-                <h1>update your details</h1>
-                <button onClick={()=>history.push("/addDetails")}> Add details </button>
+                <h1 className="text-center mt-5">No Details found</h1>
+                <p className="text-center mt-5">Please update your details</p>
+                <img src={error} height="800" width="800" className="d-block m-auto"/>
+                <button onClick={()=>history.push("/addDetails")} className="d-block m-auto"> Add details </button>
              </> : <> 
-                {/* <h1>Name: {props.currentUser && props.currentUser.name}</h1>
-                <h2>Date of Birth: {viewdetail.DOB }</h2>
-                <h2>Gender: {viewdetail.gender}</h2> */}
+               
                 <div class="jumbotron text-center d-flex justify-content-center">
       <div class="p-2">
         <img
