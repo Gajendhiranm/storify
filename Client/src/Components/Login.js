@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Register from "../Images/t.svg";
-import "../Components/Login.css";
+import "./Login.css";
 import { Link, Redirect, useHistory } from "react-router-dom";
 const Login = (props) => {
   const history = useHistory();

@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect, useHistory } from "react-router";
 // import { Link } from "react-router-dom";
 
-import "../Components/Home.css";
+import "./Home.css";
 
 const Home = (props) => {
     const history = useHistory();

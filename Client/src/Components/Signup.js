@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Register from "../Images/t.svg";
-import "../Components/Signin.css";
+import "./Signup.css";
 import { Link, Redirect, useHistory, withRouter } from "react-router-dom";
 const Signin = (props) => {
   const history = useHistory();
@@ -51,7 +51,7 @@ const Signin = (props) => {
       </div>
       <div className="col-md-6 mt-5">
         <div className="form-div d-flex flex-column align-items-center justify-content-center">
-          <h1 className="font-weight-bolder">SIGN IN</h1>
+          <h1 className="font-weight-bolder">Sign Up</h1>
           <p className="font-weight-bolder">Storify welcomes you all !!!</p>
           <form onSubmit={signup}>
             <input

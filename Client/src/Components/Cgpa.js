@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect, useHistory , Link } from "react-router-dom";
-import "../Components/Cgpa.css";
+import "./Cgpa.css";
 const Cgpa = (props) => {
     const history = new useHistory();
     return(     

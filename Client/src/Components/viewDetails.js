@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import { Redirect, useHistory} from "react-router";
 import error from "../Images/404.svg";
+import studentImage from "../Images/graduate.png";
 
 export default function ViewDetails(props) {
     
@@ -46,9 +47,9 @@ export default function ViewDetails(props) {
                 <div class="jumbotron text-center d-flex justify-content-center">
       <div class="p-2">
         <img
-          src="https://www.flaticon.com/svg/vstatic/svg/3131/3131782.svg?token=exp=1617441643~hmac=bc2d83678d82c558bfc94fd06577f110"
-          height="70"
-          width="70"
+          src={studentImage}
+          height="100"
+          width="100"
           alt=""
         />
       </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Details.css";
+import "./AddDetails.css";
 import { Redirect, useHistory} from "react-router-dom";
 export default function Details(props) {
   const history = useHistory();
@@ -55,6 +55,7 @@ useEffect(()=>{
       .then(data =>{
         console.log("At line 55 ",data.data)
         localStorage.setItem('currentUser',JSON.stringify(data.data))})
+        alert("Your details are updated...!")
   }
   return (
     <>
