@@ -30,12 +30,10 @@ export default function Details(props) {
   });
   // submitData = (e) => {
   //     e.preventDefault()
-  //     console.log(studentData)
   // }
   let regnoId = localStorage.getItem("Id");
   const details = async (e) =>{
     e.preventDefault();
-     console.log("omg : "+regnoId);
     const URL = "http://localhost:5002/details";
       const response = await fetch(URL, {
         method: "POST",

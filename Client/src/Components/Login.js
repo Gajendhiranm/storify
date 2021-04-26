@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Register from "../Images/t.svg";
-import "../Components/Login.css";
+import "./Login.css";
 import { Link, Redirect, useHistory } from "react-router-dom";
 const Login = (props) => {
   const history = useHistory();
@@ -14,7 +14,7 @@ const Login = (props) => {
       alert("Invalid password");
     } else {
       const URL = "http://localhost:5002/login";
-      const response = await fetch(URL, {
+      const res = await fetch(URL, {
         method: "POST",
         body: JSON.stringify({
           regno: regno.trim(),
@@ -24,18 +24,18 @@ const Login = (props) => {
           "Content-type":"application/json",
         }
       });
-      if(response.status === 200){
-        let currentStudent = await response.json();
+      if(res.status === 200){
+        let currentStudent = await res.json();
 
         props.setUser(currentStudent)
+        localStorage.setItem("Token",true);
        // localStorage.setItem("regno", currentStudent.regno)
         history.push("/home")
       }
-      else if(response.status === 404){
-        alert("not found");
-        console.log(e);
+      else if(res.status === 401){
+        alert("User not found");
       }  
-      else if(response.status === 401) alert("incorrect password");
+      else if(res.status === 400) alert("Incorrected password");
       else alert("error");
     }
   };

@@ -2,10 +2,9 @@ import React from "react";
 import { Redirect, useHistory } from "react-router";
 // import { Link } from "react-router-dom";
 
-import "../Components/Home.css";
+import "./Home.css";
 
 const Home = (props) => {
-    console.log(props);
     const history = useHistory();
     
     const handleLogOut = () => {
@@ -14,7 +13,6 @@ const Home = (props) => {
         props.setCurrentUser(null)
         // history.push('/login')
     }
-    console.log(props.currentUser)
     localStorage.setItem("Id",props.currentUser && props.currentUser._id);
     return(     
   
