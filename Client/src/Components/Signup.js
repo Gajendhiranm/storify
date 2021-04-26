@@ -11,15 +11,16 @@ const Signin = (props) => {
   const signup = async (e) => {
     e.preventDefault();
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // const strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    // const mediumRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
       if (!(name.length > 3 && name.length < 20)) {
-        alert("Invalid name");
+        alert("Invalid Name");
       } else if (!emailRegex.test(email)) {
-        alert("Invalid email");
-      }
-    else if (regno.length < 7) {
-      alert("Invalid regno");
-    } else if (password.length < 5 || password.length > 15) {
-      alert("Invalid password");
+        alert("Invalid Email");
+      }else if (regno.length < 6 || regno.length > 8) {
+      alert("Invalid Register Number");
+    } else if (password.length < 7 || password.length > 15) {
+      alert("Enter password more than 8 characters");
     } else {
       const URL = "http://localhost:5002/signup";
       const res = await fetch(URL, {

@@ -55,8 +55,9 @@ export default function ViewDetails(props) {
       </div>
       <div class="p-2">
         <h1>{props.currentUser && props.currentUser.name}</h1>
-        <p>Department of computer science and engineering</p>
+        <p>Department of {viewdetail.department}</p>
       </div>
+      <button className="m-5" onClick={()=>history.push("/addDetails")}>Edit details</button> 
     </div>
 
 <div class="container-fluid" >
@@ -113,12 +114,12 @@ export default function ViewDetails(props) {
             </div>
           </div>
 
-          <div class="card m-3 p-3" style={{width:"42rem"}}>
+          {/* <div class="card m-3 p-3" style={{width:"42rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Email</h5>
-              <p class="card-text">{viewdetail.gmail}</p>
+              <h5 class="card-title font-weight-bolder">Department</h5>
+              <p class="card-text">{viewdetail.department}</p>
             </div>
-          </div>
+          </div> */}
           <div class="card m-3 p-3" style={{width:"42rem"}}>
             <div class="card-body">
               <h5 class="card-title font-weight-bolder">Adress</h5>
@@ -214,7 +215,7 @@ export default function ViewDetails(props) {
 
     </div>
 </div>
-<button onClick={()=>history.push("/addDetails")}>Edit details</button> 
+
 
             </>} 
 

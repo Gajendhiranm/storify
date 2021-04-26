@@ -14,7 +14,7 @@ export default function Details(props) {
     motherName: "",
     Address: "",
     phoneNumber: "",
-    gmail: "",
+    department: "",
     AadharNumber: "",
     SSLCMark: "",
     SSLCPercentage: "",
@@ -115,9 +115,9 @@ useEffect(()=>{
                     setStudentData({...studentData,phoneNumber : e.target.value});
                   }} />
                 <input
-                  defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.gmail} className="m-3 p-3" type="email" placeholder="E-mail" 
+                  defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.department} className="m-3 p-3" type="text" placeholder="Department" 
                  onChange={(e) => {
-                  setStudentData({...studentData,gmail : e.target.value});
+                  setStudentData({...studentData,department : e.target.value});
                 }}/>
               </div>
               <div className="d-flex  flex-column">

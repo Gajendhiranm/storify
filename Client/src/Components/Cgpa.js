@@ -7,7 +7,7 @@ const Cgpa = (props) => {
         <>
          { localStorage.getItem('currentUser')==null ?  <Redirect to="/login" /> : 
           <div className="container-fluid">
-          <h1 className="text-center m-5">Cummulative Grade Point Assessment</h1>
+          <h1 className="text-center m-5">Semester Grade Point Assessment</h1>
       
           <div className="container-fluid">
       <form className="container form-container"> 
