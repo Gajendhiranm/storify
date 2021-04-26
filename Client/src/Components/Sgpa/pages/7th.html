@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CGPA calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <pre>
+     <h1>SGPA calculator(Seventh Semester)</h1>
+EG Labaratory         :<select id="credit1">
+		<option>O</option>
+		<option>A+</option>
+		<option>A</option>
+		<option>B+</option>
+		<option>B</option>
+	</select><br>
+Chemistry Labaratory  :<select id="credit2">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+PST Labaratory        :<select id="credit3">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+EM-1                  :<select id="credit4">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+Chemistry             :<select id="credit5">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+B.EEE                 :<select id="credit6">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br>
+PST                   :<select id="credit7">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+        </select><br>
+TE-1                  :<select id="credit8">
+			<option>O</option>
+			<option>A+</option>
+			<option>A</option>
+			<option>B+</option>
+			<option>B</option>
+		</select><br><br>
+<button class="btn btn-info mt-3 " onclick="Credits()">Click here</button>
+<h4 id="total"></h4>
+<h4>Credits : 19</h4>
+<h3 id="Result" >Your SGPA is ... </h3>
+<a href="6th.html" class="btn btn-info">Prev</a>&nbsp;&nbsp;<a href="8th.html" class="btn btn-info">Next</a>
+
+  </pre>
+    </div>
+    <script>
+      function Credits() {
+        var a = document.getElementById("credit1").value;
+        b = document.getElementById("credit2").value;
+        c = document.getElementById("credit3").value;
+        d = document.getElementById("credit4").value;
+        e = document.getElementById("credit5").value;
+        f = document.getElementById("credit6").value;
+        g = document.getElementById("credit7").value;
+        h = document.getElementById("credit8").value;
+        if (a == "O") {
+          a = 10;
+        } else if (a == "A+") {
+          a = 9;
+        } else if (a == "A") {
+          a = 8;
+        } else if (a == "B+") {
+          a = 7;
+        } else if (a == "B") {
+          a = 6;
+        }
+        if (b == "O") {
+          b = 10;
+        } else if (b == "A+") {
+          b = 9;
+        } else if (b == "A") {
+          b = 8;
+        } else if (b == "B+") {
+          b = 7;
+        } else if (b == "B") {
+          b = 6;
+        }
+        if (c == "O") {
+          c = 10;
+        } else if (c == "A+") {
+          c = 9;
+        } else if (c == "A") {
+          c = 8;
+        } else if (c == "B+") {
+          c = 7;
+        } else if (c == "B") {
+          c = 6;
+        }
+        if (d == "O") {
+          d = 10;
+        } else if (d == "A+") {
+          d = 9;
+        } else if (d == "A") {
+          d = 8;
+        } else if (d == "B+") {
+          d = 7;
+        } else if (d == "B") {
+          d = 6;
+        }
+        if (e == "O") {
+          e = 10;
+        } else if (e == "A+") {
+          e = 9;
+        } else if (e == "A") {
+          e = 8;
+        } else if (e == "B+") {
+          e = 7;
+        } else if (e == "B") {
+          e = 6;
+        }
+        if (f == "O") {
+          f = 10;
+        } else if (f == "A+") {
+          f = 9;
+        } else if (f == "A") {
+          f = 8;
+        } else if (f == "B+") {
+          f = 7;
+        } else if (f == "B") {
+          f = 6;
+        }
+        if (g == "O") {
+          g = 10;
+        } else if (g == "A+") {
+          g = 9;
+        } else if (g == "A") {
+          g = 8;
+        } else if (g == "B+") {
+          g = 7;
+        } else if (g == "B") {
+          g = 6;
+        }
+        if (h == "O") {
+          h = 10;
+        } else if (h == "A+") {
+          h = 9;
+        } else if (h == "A") {
+          h = 8;
+        } else if (h == "B+") {
+          h = 7;
+        } else if (h == "B") {
+          h = 6;
+        }
+        Total = 1 * a + 1 * b + 1 * c + 4 * d + 3 * e + 3 * f + 3 * g + 3 * h;
+        Result = Total / 19;
+        n = Result.toFixed(3);
+        document.getElementById("total").innerHTML = "Total : " + Total;
+        document.getElementById("Result").innerHTML = "Your SGPA is  " + n;
+      }
+    </script>
+  </body>
+</html>
