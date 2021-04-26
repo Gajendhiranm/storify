@@ -2,6 +2,8 @@ import React,{useState, useEffect} from 'react'
 import { Redirect, useHistory} from "react-router";
 import error from "../Images/404.svg";
 import studentImage from "../Images/graduate.png";
+import { jsPDF } from "jspdf";
+import 'jspdf-autotable';
 
 export default function ViewDetails(props) {
     
@@ -30,7 +32,40 @@ export default function ViewDetails(props) {
           const data = await res.json();
             setViewDetails(data.details);
     }
+    const pdfDownload = () =>{
+      const doc = new jsPDF();
+      // var col = ["Sr. No.","Details"];
+       var col1 = ["Details", "Values"];
+      //  var rows = [];
+       var rows1 = [];
 
+  /* The following array of object as response from the API req  */
+
+
+
+var itemNew = [
+
+  { index:'1',id: 'Name', detail: props.currentUser.name },
+  { index:'2',id: 'Department', detail: viewdetail.department},
+  { index:'3',id: 'Date of Birth', detail: viewdetail.DOB},
+  { index:'4',id: 'Gender', detail: viewdetail.gender}
+
+]
+
+   itemNew.forEach(element => {      
+        // var temp = [element.index,props.currentUser.name];
+        var temp1 = [element.id,element.detail];
+        // rows.push(temp);
+        rows1.push(temp1);
+
+    });        
+
+        // doc.autoTable(col, rows, { startY: 10 });
+
+        doc.autoTable(col1, rows1, { startY: 10 });
+        doc.save('Test.pdf');
+
+    }
 
 
     return (
@@ -57,7 +92,8 @@ export default function ViewDetails(props) {
         <h1>{props.currentUser && props.currentUser.name}</h1>
         <p>Department of {viewdetail.department}</p>
       </div>
-      <button className="m-5" onClick={()=>history.push("/addDetails")}>Edit details</button> 
+      <button className="m-5" onClick={()=>history.push("/addDetails")}>Edit details</button>
+      <button onClick={pdfDownload}>Download document</button>
     </div>
 
 <div class="container-fluid" >
