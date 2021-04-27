@@ -88,7 +88,7 @@ var itemNew = [
 
     return (
         <>
-        { localStorage.getItem('currentUser')==null ? <Redirect to="/login" /> : 
+        { localStorage.getItem('Token')==null ? <Redirect to="/login" /> : 
         <div>
             {viewdetail == null ? <>
                 <h1 className="text-center mt-5">No Details found</h1>
@@ -116,7 +116,7 @@ var itemNew = [
       </div>
     </div>
 
-<div class="" >
+    <div class="container-fluid" >
     <div class="d-flex flex-wrap">
 
         <div class="card m-3 p-3" style={{width:"25rem"}}>
@@ -215,55 +215,62 @@ var itemNew = [
 
           <div class="card m-3 p-3" style={{width:"25rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Semester - 1</h5>
+              <h5 class="card-title font-weight-bolder">Semester 1 - SGPA</h5>
               <p class="card-text">{viewdetail.semesterOne}</p>
             </div>
           </div>
 
           <div class="card m-3 p-3" style={{width:"25rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Semester - 2</h5>
+              <h5 class="card-title font-weight-bolder">Semester 2 - SGPA</h5>
               <p class="card-text">{viewdetail.semesterTwo}</p>
             </div>
           </div>
           <div class="card m-3 p-3" style={{width:"25rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Semester - 3</h5>
+              <h5 class="card-title font-weight-bolder">Semester 3 - SGPA</h5>
               <p class="card-text">{viewdetail.semesterThree}</p>
             </div>
           </div>
           <div class="card m-3 p-3" style={{width:"25rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Semester - 4</h5>
+              <h5 class="card-title font-weight-bolder">Semester 4 - SGPA</h5>
               <p class="card-text">{viewdetail.semesterFour}</p>
             </div>
           </div>
 
           <div class="card m-3 p-3" style={{width:"25rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Semester - 5</h5>
+              <h5 class="card-title font-weight-bolder">Semester 5 - SGPA</h5>
               <p class="card-text">{viewdetail.semesterFive}</p>
             </div>
           </div>
 
           <div class="card m-3 p-3" style={{width:"25rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Semester - 6</h5>
+              <h5 class="card-title font-weight-bolder">Semester 6 - SGPA</h5>
               <p class="card-text">{viewdetail.semesterSix}</p>
             </div>
           </div>
 
           <div class="card m-3 p-3" style={{width:"25rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Semester - 7</h5>
+              <h5 class="card-title font-weight-bolder">Semester 7 - SGPA</h5>
               <p class="card-text">{viewdetail.semesterSeven}</p>
             </div>
           </div>
 
           <div class="card m-3 p-3" style={{width:"25rem"}}>
             <div class="card-body">
-              <h5 class="card-title font-weight-bolder">Semester - 8</h5>
+              <h5 class="card-title font-weight-bolder">Semester 8 - SGPA</h5>
               <p class="card-text">{viewdetail.semesterEight}</p>
+            </div>
+          </div>
+
+          <div class="card m-3 p-3" style={{width:"25rem"}}>
+            <div class="card-body">
+              <h5 class="card-title font-weight-bolder">CGPA</h5>
+              <p class="card-text">{viewdetail.overallCGPA}</p>
             </div>
           </div>
 

@@ -22,7 +22,7 @@ function App() {
   
 
   const setUser = (user)=>{
-      localStorage.setItem('currentUser',JSON.stringify(user));
+      // localStorage.setItem('currentUser',JSON.stringify(user));
       setCurrentUser(user)
     }
   

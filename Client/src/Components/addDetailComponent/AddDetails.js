@@ -40,26 +40,41 @@ useEffect(()=>{
   let regnoId = localStorage.getItem("Id");
   const details = async (e) =>{
     e.preventDefault();
-    const URL = "http://localhost:5002/details";
-      const response = await fetch(URL, {
-        method: "POST",
-        body: JSON.stringify({
-          details:studentData,
-          findId:regnoId
-        }),
-        headers: {
-          "Content-type": "application/json",
-        },
-      })
-      .then(response  => response.json())
-      .then(data =>{
-        console.log("At line 55 ",data.data)
-        localStorage.setItem('currentUser',JSON.stringify(data.data))})
-        alert("Your details are updated...!")
+    if(studentData.DOB == ""){
+      alert("Enter the Date of Birth");
+    }else if(studentData.gender == "Gender"){
+      alert("Select the Gender");
+    }else if(studentData.Address == ""){
+      alert("Enter the Address");
+    }
+    else if(studentData.phoneNumber.length == 9){
+      alert("Enter the 10 Digit Phone Number");
+    }
+    else if(studentData.AadharNumber.length == 6){
+      alert("Enter the 12 Digit Aadhar Number");
+    }
+    else{
+      const URL = "http://localhost:5002/details";
+        const response = await fetch(URL, {
+          method: "POST",
+          body: JSON.stringify({
+            details:studentData,
+            findId:regnoId
+          }),
+          headers: {
+            "Content-type": "application/json",
+          },
+        })
+        .then(response  => response.json())
+        .then(data =>{
+          console.log("At line 55 ",data.data)
+          localStorage.setItem('currentUser',JSON.stringify(data.data))})
+          alert("Your details are updated...!")
+    }
   }
   return (
     <>
-     { localStorage.getItem('currentUser')==null ? <Redirect to="/login" />:
+     { localStorage.getItem('Token')==null ? <Redirect to="/login" />:
         <div>
         <div className="container-fluid">
           <h1 className="m-5 text-center">Personal Details</h1>
@@ -95,11 +110,12 @@ useEffect(()=>{
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.fatherName} className="m-3 p-3" type="text" placeholder="Father's Name"  onChange={(e) => {
                     studentData.fatherName = e.target.value;
-                  }}/>
+                  }}
+                  required maxlength="45"/>
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.motherName} className="m-3 p-3" type="text" placeholder="Mother's Name"  onChange={(e) => {
                     studentData.motherName = e.target.value;
-                  }} />
+                  }} required maxlength="45"/>
                 <textarea
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.Address}
                   className="m-3 p-3 address"
@@ -255,16 +271,11 @@ useEffect(()=>{
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.description} className="m-3 p-3" type="text" placeholder="Description" onChange={(e) => {
                       setStudentData({...studentData,description : e.target.value});
-                    }}/>
+                    }}
+                    required maxlength="45"/>
               </div>
             </div>
-            <button
-              type="submit"
-              className="submitBotton mt-4"
-            >
-            
-              Submit
-            </button>
+            <button type="submit" className="submitBotton mt-4">Submit</button>
           </form>
         </div>
       </div>

@@ -45,7 +45,7 @@ const Signin = (props) => {
   return (
     <>
     
-    { localStorage.getItem('currentUser')==null ?     <div className="container-fluid Signup ">
+    { localStorage.getItem('Token')==null ?     <div className="container-fluid Signup ">
     <div className="row">
       <div className="col-md-6 image-div text-center">
         <img src={Register} className="img-fluid" alt="signin" />

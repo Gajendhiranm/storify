@@ -41,7 +41,7 @@ const Login = (props) => {
   };
   return (
     <>
-    { localStorage.getItem('currentUser')==null ?  <div>
+    { localStorage.getItem('Token')==null ?  <div>
       <div className="container-fluid Signup position-relative">
         <div className="row">
           <div className="col-md-6 image-div text-center">

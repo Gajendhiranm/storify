@@ -17,7 +17,7 @@ const Home = (props) => {
     return(     
   
         <>
-          { localStorage.getItem('currentUser')==null ? <Redirect to="/login" /> : 
+          { localStorage.getItem('Token')==null ? <Redirect to="/login" /> : 
           <div className="container-fluid">
             <h1 className="text-center m-5">Welcome <span className="stdName font-weight-bolder">{props.currentUser && props.currentUser.name} -- {props.currentUser &&  props.currentUser.regno}</span></h1>
             <div className="main-buttons d-flex  flex-column  align-items-center justify-content-center">
