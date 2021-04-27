@@ -93,11 +93,11 @@ useEffect(()=>{
                   <option value="Other">Other</option>
                 </select>
                 <input
-                  defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.fatherName} className="m-3 p-3" type="text" placeholder="Father's-Name"  onChange={(e) => {
+                  defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.fatherName} className="m-3 p-3" type="text" placeholder="Father's Name"  onChange={(e) => {
                     studentData.fatherName = e.target.value;
                   }}/>
                 <input
-                  defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.motherName} className="m-3 p-3" type="text" placeholder="Mother's-Name"  onChange={(e) => {
+                  defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.motherName} className="m-3 p-3" type="text" placeholder="Mother's Name"  onChange={(e) => {
                     studentData.motherName = e.target.value;
                   }} />
                 <textarea
@@ -143,6 +143,7 @@ useEffect(()=>{
                   onChange={(e) => {
                       setStudentData({...studentData,SSLCPercentage : e.target.value});
                     }}
+                    
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.HSCMark} className="m-3 p-3" type="number" placeholder="HSC Mark" 
@@ -163,7 +164,7 @@ useEffect(()=>{
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.HSCCutOff} className="m-3 p-3" typer="number" placeholder="HSC Cutoff" 
                  onChange={(e) => {
                   setStudentData({...studentData,HSCCutOff : e.target.value});
-                }}/>
+                }} step="any"/>
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterOne}
                   className="m-3 p-3"
@@ -172,6 +173,7 @@ useEffect(()=>{
                   onChange={(e) => {
                       setStudentData({...studentData,semesterOne : e.target.value});
                     }}
+                    step="any"
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterTwo}
@@ -181,6 +183,7 @@ useEffect(()=>{
                   onChange={(e) => {
                       setStudentData({...studentData,semesterTwo : e.target.value});
                     }}
+                    step="any"
                 />
               </div>
               <div className="d-flex  flex-column">
@@ -192,6 +195,7 @@ useEffect(()=>{
                   onChange={(e) => {
                       setStudentData({...studentData,semesterThree:e.target.value});
                     }}
+                    step="any"
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterFour}
@@ -201,6 +205,7 @@ useEffect(()=>{
                   onChange={(e) => {
                       setStudentData({...studentData,semesterFour : e.target.value});
                     }}
+                    step="any"
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterFive}
@@ -210,6 +215,7 @@ useEffect(()=>{
                   onChange={(e) => {
                       setStudentData({...studentData,semesterFive : e.target.value});
                     }}
+                    step="any"
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterSix}
@@ -219,6 +225,7 @@ useEffect(()=>{
                   onChange={(e) => {
                       setStudentData({...studentData,semesterSix : e.target.value});
                     }}
+                    step="any"
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterSeven}
@@ -228,21 +235,23 @@ useEffect(()=>{
                   onChange={(e) => {
                       setStudentData({...studentData,semesterSeven : e.target.value});
                     }}
+                    step="any"
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterEight}
                   className="m-3 p-3"
                   type="number"
-                  placeholder="Semster-8 SGPA"
+                  placeholder="Semster-8 SGPA" 
                   onChange={(e) => {
                       setStudentData({...studentData,semesterEight : e.target.value});
                     }}
+                    step="any"
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.overallCGPA} className="m-3 p-3" type="number" placeholder="UG - CGPA"
                  onChange={(e) => {
                   setStudentData({...studentData,overallCGPA : e.target.value});
-                }} />
+                }} step="any"/>
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.description} className="m-3 p-3" type="text" placeholder="Description" onChange={(e) => {
                       setStudentData({...studentData,description : e.target.value});
