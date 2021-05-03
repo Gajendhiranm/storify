@@ -21,7 +21,7 @@ export default function Details(props) {
     HSCMark: "",
     HSCPercentage: "",
     HSCCutOff: "",
-    semesterOne: "",
+    semesterOne: "0.0",
     semesterTwo: "",
     semesterThree: "",
     semesterFour: "",
@@ -183,7 +183,7 @@ useEffect(()=>{
                 }} step="any"/>
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterOne}
-                  className="m-3 p-3"
+                  className="m-3 p-3 disable"
                   type="number"
                   placeholder="Semster-1 SGPA"
                   onChange={(e) => {
@@ -193,7 +193,7 @@ useEffect(()=>{
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterTwo}
-                  className="m-3 p-3"
+                  className="m-3 p-3 disable"
                   type="number"
                   placeholder="Semster-2 SGPA"
                   onChange={(e) => {
@@ -205,7 +205,7 @@ useEffect(()=>{
               <div className="d-flex  flex-column">
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterThree}
-                  className="m-3 p-3"
+                  className="m-3 p-3 disable"
                   type="number"
                   placeholder="Semster-3 SGPA"
                   onChange={(e) => {
@@ -215,7 +215,7 @@ useEffect(()=>{
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterFour}
-                  className="m-3 p-3"
+                  className="m-3 p-3 disable"
                   type="number"
                   placeholder="Semster-4 SGPA"
                   onChange={(e) => {
@@ -225,7 +225,7 @@ useEffect(()=>{
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterFive}
-                  className="m-3 p-3"
+                  className="m-3 p-3 disable"
                   type="number"
                   placeholder="Semster-5 SGPA"
                   onChange={(e) => {
@@ -235,7 +235,7 @@ useEffect(()=>{
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterSix}
-                  className="m-3 p-3"
+                  className="m-3 p-3 disable"
                   type="number"
                   placeholder="Semster-6 SGPA"
                   onChange={(e) => {
@@ -245,7 +245,7 @@ useEffect(()=>{
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterSeven}
-                  className="m-3 p-3"
+                  className="m-3 p-3 disable"
                   type="number"
                   placeholder="Semster-7 SGPA"
                   onChange={(e) => {
@@ -255,7 +255,7 @@ useEffect(()=>{
                 />
                 <input
                   defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.semesterEight}
-                  className="m-3 p-3"
+                  className="m-3 p-3 disable"
                   type="number"
                   placeholder="Semster-8 SGPA" 
                   onChange={(e) => {
@@ -264,7 +264,7 @@ useEffect(()=>{
                     step="any"
                 />
                 <input
-                  defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.overallCGPA} className="m-3 p-3" type="number" placeholder="UG - CGPA"
+                  defaultValue = {props.currentUser && props.currentUser.details && props.currentUser.details.overallCGPA} className="m-3 p-3 disable" type="number" placeholder="UG - CGPA"
                  onChange={(e) => {
                   setStudentData({...studentData,overallCGPA : e.target.value});
                 }} step="any"/>

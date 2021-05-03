@@ -41,5 +41,5 @@
     font-size: 20px;
 }
 .disable{
-    /* pointer-events: none !important; */
+     pointer-events: none !important; 
 }
