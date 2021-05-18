@@ -40,3 +40,8 @@
     color: white;
     font-size: 20px;
 }
+input .disabled {
+    pointer-events:none;
+    color:#AAA;
+    background:#F5F5F5;
+}

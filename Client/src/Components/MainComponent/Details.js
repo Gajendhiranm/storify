@@ -119,6 +119,7 @@ export default function Details(props) {
                 studentData.SSLCMark = e.target.value;
               }}/>
               <input
+                
                 className="m-3 p-3"
                 type="number"
                 placeholder="SSLC Percentage"
@@ -132,6 +133,8 @@ export default function Details(props) {
               }}
               />
               <input
+              class="disabled"
+              name="disable"
                 className="m-3 p-3"
                 type="number"
                 placeholder="HSC Percentage"
@@ -144,72 +147,88 @@ export default function Details(props) {
                 studentData.HSCCutOff = e.target.value;
               }}/>
               <input
+                
                 className="m-3 p-3"
                 type="number"
                 placeholder="Semster-1 SGPA"
                 onChange={(e) => {
                     studentData.semesterOne = e.target.value;
                   }}
+                  disabled
               />
               <input
+              
                 className="m-3 p-3"
                 type="number"
                 placeholder="Semster-2 SGPA"
                 onChange={(e) => {
                     studentData.semesterTwo = e.target.value;
                   }}
+                  disabled
               />
             </div>
             <div className="d-flex  flex-column">
               <input
+              
                 className="m-3 p-3"
                 type="number"
                 placeholder="Semster-3 SGPA"
                 onChange={(e) => {
                     studentData.semesterThree= e.target.value;
                   }}
+                  disabled
               />
               <input
+            
                 className="m-3 p-3"
                 type="number"
                 placeholder="Semster-4 SGPA"
                 onChange={(e) => {
                     studentData.semesterFour = e.target.value;
                   }}
+                  disabled
               />
               <input
+             
                 className="m-3 p-3"
                 type="number"
                 placeholder="Semster-5 SGPA"
                 onChange={(e) => {
                     studentData.semesterFive = e.target.value;
                   }}
+                  disabled
               />
               <input
+             
                 className="m-3 p-3"
                 type="number"
                 placeholder="Semster-6 SGPA"
                 onChange={(e) => {
                     studentData.semesterSix = e.target.value;
                   }}
+                  disabled
               />
               <input
+             
                 className="m-3 p-3"
                 type="number"
                 placeholder="Semster-7 SGPA"
                 onChange={(e) => {
                     studentData.semesterSeven = e.target.value;
                   }}
+                  disabled
               />
               <input
+             
                 className="m-3 p-3"
                 type="number"
                 placeholder="Semster-8 SGPA"
                 onChange={(e) => {
                     studentData.semesterEight = e.target.value;
                   }}
+                  disabled
               />
-              <input className="m-3 p-3" type="number" placeholder="UG - CGPA"
+              <input disabled className="m-3 p-3" type="number" placeholder="UG - CGPA"
                onChange={(e) => {
                 studentData.overallCGPA = e.target.value;
               }} />
