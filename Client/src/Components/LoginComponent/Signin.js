@@ -21,7 +21,7 @@ const Signin = () => {
     } else if (password.length < 5 || password.length > 15) {
       alert("Invalid password");
     } else {
-      const URL = "http://localhost:5002/signup";
+      const URL = "/signup";
       const response = await fetch(URL, {
         method: "POST",
         body: JSON.stringify({

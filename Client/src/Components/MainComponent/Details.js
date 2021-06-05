@@ -34,7 +34,7 @@ export default function Details(props) {
   let regnoId = localStorage.getItem("Id");
   const details = async (e) =>{
     e.preventDefault();
-    const URL = "http://localhost:5002/details";
+    const URL = "/details";
       const response = await fetch(URL, {
         method: "POST",
         body: JSON.stringify({

@@ -22,7 +22,7 @@ const Signin = (props) => {
     } else if (password.length < 7 || password.length > 15) {
       alert("Enter password more than 8 characters");
     } else {
-      const URL = "http://localhost:5002/signup";
+      const URL = "/signup";
       const res = await fetch(URL, {
         method: "POST",
         body: JSON.stringify({

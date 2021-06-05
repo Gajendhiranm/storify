@@ -54,7 +54,7 @@ useEffect(()=>{
       alert("Enter the 12 Digit Aadhar Number");
     }
     else{
-      const URL = "http://localhost:5002/details";
+      const URL = "/details";
         const response = await fetch(URL, {
           method: "POST",
           body: JSON.stringify({

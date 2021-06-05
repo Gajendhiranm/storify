@@ -13,7 +13,7 @@ const Login = (props) => {
     } else if (password.length < 5 || password.length > 15) {
       alert("Invalid password");
     } else {
-      const URL = "http://localhost:5002/login";
+      const URL = "/login";
       const res = await fetch(URL, {
         method: "POST",
         body: JSON.stringify({

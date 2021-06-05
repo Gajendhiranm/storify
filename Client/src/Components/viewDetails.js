@@ -20,7 +20,7 @@ export default function ViewDetails(props) {
     },[]);
 
     const getAllDetails = async() =>{
-        const res = await fetch(`http://localhost:5002/viewdetails`, {
+        const res = await fetch(`/viewdetails`, {
             method: "POST",
             body: JSON.stringify({
                 findId:regnoId
